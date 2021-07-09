@@ -1,10 +1,8 @@
 package ru.tcreator;
 
-import java.util.Arrays;
-
 public class Main {
-  public static void main(String[] args) {
-    Fib fib = new Fib();
-    System.out.println(fib.calculateFibIterate(200000));
+  public static void main(String[] args) throws InterruptedException {
+    new Thread(new Server()).start();
+    new Thread(new Client()).start();
   }
 }
